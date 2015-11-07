@@ -1,0 +1,302 @@
+This is the Girl Develop It Git Hub Class
+
+Michelle@MICHELLE ~ (master)
+$ cd ~/.ssh
+
+Michelle@MICHELLE ~/.ssh (master)
+$ ls -al ~/.ssh
+total 10
+drwxr-xr-x    1 Michelle Administ        0 Jul 31 20:12 .
+drwxr-xr-x    1 Michelle Administ    16384 Oct 28 13:46 ..
+-rw-r--r--    1 Michelle Administ     1679 Jul 31 20:12 github_rsa
+-rw-r--r--    1 Michelle Administ      399 Jul 31 20:12 github_rsa.pub
+
+Michelle@MICHELLE ~/.ssh (master)
+$ ssh-keygen -t rsa -b 4096 -C "michellerhilton@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Michelle/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Michelle/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Michelle/.ssh/id_rsa.pub.
+The key fingerprint is:
+49:53:a7:1f:34:d5:28:ad:24:d3:d2:36:76:65:dc:40 michellerhilton@gmail.com
+The key's randomart image is:
++--[ RSA 4096]----+
+|          .o++E*+|
+|         .++O.+.+|
+|        o .B.=   |
+|       . o ...   |
+|        S   .    |
+|                 |
+|                 |
+|                 |
+|                 |
++-----------------+
+
+Michelle@MICHELLE ~/.ssh (master)
+$ ls -la
+total 14
+drwxr-xr-x    1 Michelle Administ     4096 Nov  7 10:42 .
+drwxr-xr-x    1 Michelle Administ    16384 Oct 28 13:46 ..
+-rw-r--r--    1 Michelle Administ     1679 Jul 31 20:12 github_rsa
+-rw-r--r--    1 Michelle Administ      399 Jul 31 20:12 github_rsa.pub
+-rw-r--r--    1 Michelle Administ     3243 Nov  7 10:42 id_rsa
+-rw-r--r--    1 Michelle Administ      751 Nov  7 10:42 id_rsa.pub
+
+Michelle@MICHELLE ~/.ssh (master)
+$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDHd5846hjJqltcHCgAU+UVLut3V/IQm7r5y4rWT/Y0
+w5W9KC8yavuMRgDd6xWjJR7rjgF/SYcY3Aob3Y/kBZph1lsixYjv+QRlR8jLBMEPRgw58NjqukXYjVm5
+DcY1494/jTRP0ZWevcnCFI+dTTuhlgKhZ/bE9860s3p7zcrzxIDgUsk+RBy9WH4x0NDyuBp2E90hqVTo
+I5OfnpERcxYgklrn557yGeWRctArWu3+44TCQY35/TZh7hqMZK32/UTrmSTGdt2LerWHgEeyp+nTCXX8
+yUaS2jr6VXhsR5j5orfgPsn87bPPxMvRwMatFMrK6ucvI7WaffQ0MqEm2nkAbtK3uyAuzaDednD1BSVB
+Pp0kWJT6pSD6yQBt6fWkfwbNPyM84nv5TcMQ5IpOA1HQKDoxtrUV2bHvqBdHw8yyH0EpL/P5BOGxMC5v
+zIplkb76C79P5DXrj0qjFU7ZpV0t7jBAWpL18QL38Hs32UyMDjFQTSRUrYYG2dp/0Ju/SHeaVj7oMsbI
+ikzPK4Ldpu4dC4umBo4nr61TOcX62nWj28r36DS6df7kgTSCxSDwutU4KzB+qzqKdDgAeFdJawGDYLWR
+k5o+drPzgIeUkWqzVoTWq9/3R9LX6aK86yvr2m7HCYy2wk8VxfhTZr/e8QV2E2w4u9ldzBLJ/vKWxyk3
+sw== michellerhilton@gmail.com
+
+Michelle@MICHELLE ~/.ssh (master)
+$ git config --global --list
+color.ui=true
+user.name=Michelle Hilton
+user.email=michellerhilton@gmail.com
+filter.lfs.clean=git-lfs clean %f
+filter.lfs.smudge=git-lfs smudge %f
+filter.lfs.required=true
+
+Michelle@MICHELLE ~/.ssh (master)
+$ cd~
+sh.exe": cd~: command not found
+
+Michelle@MICHELLE ~/.ssh (master)
+$ mkdir my-first-repo
+
+Michelle@MICHELLE ~/.ssh (master)
+$ cd my-first-repo
+
+Michelle@MICHELLE ~/.ssh/my-first-repo (master)
+$ cd ~
+
+Michelle@MICHELLE ~ (master)
+$ mkdir my-first-repo
+
+Michelle@MICHELLE ~ (master)
+$ cd my-first-repo
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ cd ..
+
+Michelle@MICHELLE ~ (master)
+$ cd .ssh
+
+Michelle@MICHELLE ~/.ssh (master)
+$ ls
+github_rsa  github_rsa.pub  id_rsa  id_rsa.pub  my-first-repo
+
+Michelle@MICHELLE ~/.ssh (master)
+$ rm -r my-first-repo
+
+Michelle@MICHELLE ~/.ssh (master)
+$ ls
+github_rsa  github_rsa.pub  id_rsa  id_rsa.pub
+
+Michelle@MICHELLE ~/.ssh (master)
+$ cd ..
+
+Michelle@MICHELLE ~ (master)
+$ cd my-first-repo
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git init
+Initialized empty Git repository in c:/Users/Michelle/my-first-repo/.git/
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ touch hello_world.txt
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ ls
+hello_world.txt
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        hello_world.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote add origin https://github.com/mrhilton/girlDevelopItClass.git
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote -v
+origin  https://github.com/mrhilton/girlDevelopItClass.git (fetch)
+origin  https://github.com/mrhilton/girlDevelopItClass.git (push)
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        hello_world.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git add .
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   hello_world.txt
+
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git commit -m "Adding hello world"
+[master (root-commit) 897f2ec] Adding hello world
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git log
+commit 897f2ec59f642b2832cd9950c32c54e977a57725
+Author: Michelle Hilton <michellerhilton@gmail.com>
+Date:   Sat Nov 7 11:32:47 2015 -0500
+
+    Adding hello world
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ q
+sh.exe": q: command not found
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git push origin master
+Username for 'https://github.com': mrhilton
+Password for 'https://mrhilton@github.com':
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 228 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/mrhilton/girlDevelopItClass.git
+ * [new branch]      master -> master
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote -v
+origin  https://github.com/mrhilton/girlDevelopItClass.git (fetch)
+origin  https://github.com/mrhilton/girlDevelopItClass.git (push)
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote rm origin
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote -v
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote add origin ssh://git@github.com:mrhilton/girlDevelopItClass.git
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote -v
+origin  ssh://git@github.com:mrhilton/girlDevelopItClass.git (fetch)
+origin  ssh://git@github.com:mrhilton/girlDevelopItClass.git (push)
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git push origin master
+ssh: Could not resolve hostname github.com: no address associated with name
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote rm origin
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote-v
+git: 'remote-v' is not a git command. See 'git --help'.
+
+Did you mean this?
+        remote-fd
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote -v
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote add origin https://github.com/mrhilton/girlDevelopItClass.git
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git remote -v
+origin  https://github.com/mrhilton/girlDevelopItClass.git (fetch)
+origin  https://github.com/mrhilton/girlDevelopItClass.git (push)
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git branch
+* master
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git pull origin master
+From https://github.com/mrhilton/girlDevelopItClass
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+Already up-to-date.
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git pull
+From https://github.com/mrhilton/girlDevelopItClass
+ * [new branch]      newEdits   -> origin/newEdits
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git branch -a
+* master
+  remotes/origin/master
+  remotes/origin/newEdits
+
+Michelle@MICHELLE ~/my-first-repo (master)
+$ git checkout newEdits
+Branch newEdits set up to track remote branch newEdits from origin.
+Switched to a new branch 'newEdits'
+
+Michelle@MICHELLE ~/my-first-repo (newEdits)
+$
